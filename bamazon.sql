@@ -24,7 +24,7 @@ CREATE TABLE products (
   PRIMARY KEY (item_id)
 );
 SELECT * FROM products;
-INSERT INTO products (item_id, product_name, department_name, price, stock_quantity) VALUES ("shoes", "kids", 99.99, 5), 
+INSERT INTO products (product_name, department_name, price, stock_quantity) VALUES ("shoes", "kids", 99.99, 5), 
 ("hat", "women", 69.99, 6), ("ball", "sports", 24.00, 8), ("pants", "men", 79.99, 16), ("shorts", "kids", 35.00, 10),
 ("TV", "eletronics", 399.99, 20), ("computer", "eletronics", 499.99, 11), ("rug", "home", 109.99, 2), 
 ("sweater", "women", 39.99, 8), ("coat", "men", 199.99, 10);
