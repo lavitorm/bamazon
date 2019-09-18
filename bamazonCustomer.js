@@ -71,7 +71,9 @@ function purchaseOrder(ID, amtNeeded) {
         if (amtNeeded <= res[0].stock_quantity) {
             var totalCost = res[0].price * amtNeeded;
             console.log("Your total cost for " + amtNeeded + " " + res[0].product_name + " is " + totalCost + " Thank you!");
-            connection.query("UPDATE products SET stock_quantity = stock_quantity - " + amtNeeded + "WHERE item_id = " + ID);
+            var stUpdate = res[0].stock_quantity - amtNeeded;
+            console.log (stUpdate);
+            connection.query("UPDATE products SET stock_quantity = " + stUpdate + "WHERE item_id = " + ID);
         } else {
             console.log("Insufficient quantity!");
         };
